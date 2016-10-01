@@ -40,8 +40,9 @@
     font-size: 42px;
     text-align: center;
     font-weight: normal;
-    margin-top: 60px;
+    margin: 60px auto 0;
     word-wrap: break-word;
+    max-width: 940px;
 }
 
 .register {
@@ -53,7 +54,7 @@
 
 .button {
     background-color: #a20000;
-    padding: 25px 35px 25px 35px;
+    padding: 20px;
     text-transform: uppercase;
     color: #f7f7f7;
     -webkit-appearance: none;
@@ -64,7 +65,65 @@
     font-family: 'museo_sans500', sans-serif;
 }
 
+.breaker {
+    display: none;
+}
+
+.go-to-betsafe {
+    margin-bottom: 40px;
+}
+
 .congratulation-item {
-    height: 400px;
-    padding: 80px;
+    display: block;
+    margin: 55px auto;
+    max-width: 100%;
+}
+
+.share {
+    font-family: 'museo_sans100', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.share-btn {
+    display: block;
+    margin: 80px auto 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .result {
+        font-size: 36px;
+        font-family: 'museo_sans300', sans-serif;
+    }
+
+    .congratulation {
+        font-size: 24px;
+        font-family: 'museo_sans100', sans-serif;
+    }
+
+    .register {
+        font-size: 30px;
+        font-family: 'museo_sans100', sans-serif;
+    }
+
+    .button {
+        font-size: 30px;
+    }
+
+    .share-btn {
+        margin-top: 60px;
+    }
+
+    .share {
+        font-size: 24px;
+    }
+
+    .breaker {
+        display: block;
+    }
+
+    .congratulation-item {
+        display: inline;
+        margin: 55px;
+    }
 }
