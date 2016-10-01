@@ -24,3 +24,14 @@ function viewResult() {
         window.location.href = "win.html";
     }
 }
+
+$(document).ready(function () {
+    $('#start-quiz').on('click', function () {
+        var quiz = $('#quiz');
+
+        quiz.slideDown();
+        $('html, body').animate({
+            scrollTop: quiz.offset().top
+        }, 1000);
+    });
+});
