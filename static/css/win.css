@@ -43,6 +43,10 @@
     margin: 60px auto 0;
     word-wrap: break-word;
     max-width: 940px;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 .register {

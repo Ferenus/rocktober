@@ -58,6 +58,11 @@
     font-family: 'museo_sans500', sans-serif;
 }
 
+.result {
+    font-size: 48px;
+    font-family: 'museo_sans500', sans-serif;
+}
+
 @media screen and (min-width: 1024px) {
     .betsafe-logo {
         height: 85px;
