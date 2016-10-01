@@ -15,7 +15,7 @@
         <div class="betsafe-logo">
             <img src="static/img/logo.png">
         </div>
-        <div class="main">
+        <div class="main" id="intro">
             <img class="rocktober-logo" src="static/img/rocktober.png">
             <img class="rocktober-logo-big" src="static/img/rocktober-big.png">
             <h1 class="intro">
@@ -23,6 +23,44 @@
                 Motörhead, Guns 'n Roses and Jimi Hendrix.
             </h1>
             <button id="start-quiz" class="button start-quiz">Start quiz</button>
+        </div>
+        <div class="main" id="results_win">
+            <img class="rocktober-logo always-visible" src="static/img/rocktober.png">
+            <h1 class="result">
+                YOUR RESULT IS <span id="results_score_win"></span>/19
+            </h1>
+            <div class="congratulation">
+                You're a Rockstar! You now have a chance to win an authentic Motörhead&trade; darts board, an iPhone cover
+                or a Guns 'n Roses band t-shirt. All you need to do is register an account with Betsafe on the link and
+                you will automatically be included in the draw to win one of these exclusive prize! At Betsafe you can
+                also win Free Spins every day this Rocktober with our Daily Teaser for 500,000 Free Spins and a weekly
+                &euro;5,000 Rocktober Tournament.
+            </div>
+            <div class="register">
+                REGISTER AT BETSAFE TO JOIN THE DRAW
+            </div>
+            <button class="button go-to-betsafe">GO TO BETSAFE</button><br/>
+            <div class="congratulation-items">
+                <img class="congratulation-item" src="static/img/cong1.png">
+                <img class="congratulation-item" src="static/img/cong2.png">
+                <img class="congratulation-item" src="static/img/cong3.png">
+                <br class="breaker">
+                <img class="congratulation-item" src="static/img/cong4.png">
+                <img class="congratulation-item" src="static/img/cong5.png">
+            </div>
+            <div class="share">
+                <span>Share your result on Facebook</span>
+            </div>
+            <button class="fb-share-button" style="margin-top: 30px"
+                    data-href="http://betsafe.com"
+                    data-layout="button_count">Share</button>
+        </div>
+        <div id="results_lose" class="main">
+            <img class="rocktober-logo always-visible" src="static/img/rocktober.png">
+            <h1 class="result">
+                YOUR RESULT IS <span id="results_score_lose"></span>/19
+            </h1>
+            <button class="button try-again" id="try-again">Click here to try again</button>
         </div>
         <div id="quiz" class="quiz">
             <h1 class="quiz-header">The Rocktober quiz</h1>

@@ -19,10 +19,34 @@ function viewResult() {
         }
     }
     if (result < 4) {
-        window.location.href = "lose.html";
+        lose(result);
     } else {
-        window.location.href = "win.html";
+        win(result)
     }
+}
+
+function win(score) {
+    $('#intro').hide();
+    $('#results_win').slideDown();
+    $('#results_score_win').text(score);
+
+    $('html, body').animate({
+        scrollTop: $('#results_win').offset().top
+    }, 500, function () {
+        $('#quiz').hide();
+    });
+}
+
+function lose(score) {
+    $('#intro').hide();
+    $('#results_lose').slideDown();
+    $('#results_score_lose').text(score);
+
+    $('html, body').animate({
+        scrollTop: $('#results_lose').offset().top
+    }, 500, function () {
+        $('#quiz').hide();
+    });
 }
 
 $(document).ready(function () {
@@ -32,6 +56,10 @@ $(document).ready(function () {
         quiz.slideDown();
         $('html, body').animate({
             scrollTop: quiz.offset().top
-        }, 1000);
+        }, 500);
+    });
+
+    $('#try-again').on('click', function () {
+        location.reload();
     });
 });
