@@ -1,0 +1,22 @@
+.contents {
+    background-color: #222327;
+
+}
+
+.betsafe-logo {
+    background-color: #010101;
+    height: 133px;
+}
+
+.intro {
+    font-size: 42px;
+    font-family: 'museo_sans100';
+}
+
+.button {
+    background-color: #a20000;
+    padding: 35px;
+    text-transform: uppercase;
+    color: #f7f7f7;
+}
+
