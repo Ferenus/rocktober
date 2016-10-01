@@ -59,6 +59,11 @@
     font-family: 'museo_sans100', sans-serif;
     font-size: 42px;
     font-weight: normal;
+    margin: 50px 0 90px 0;
+}
+
+.quiz-item {
+    margin-top: 40px;
 }
 
 .question {
@@ -79,11 +84,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 80px 20px;
+    padding: 80px 20px 40px 20px;
     font-family: 'museo_sans300', sans-serif;
     font-size: 42px;
     text-align: left;
     margin-top: 20px;
+    box-shadow: 0 10px 20px #0d0d0d;
 }
 
 .answer {
