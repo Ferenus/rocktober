@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rocktober</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src='http://connect.facebook.net/en_US/all.js'></script>
     <script src="static/js/main.js"></script>
     <link rel="stylesheet" href="static/css/normalize.css" />
     <link rel="stylesheet" href="static/fonts/stylesheet.css" />
@@ -50,10 +51,8 @@
             </div>
             <div class="share">
                 <span>Share your result on Facebook</span>
+                <button class="button share-btn" onclick="shareFb();">Share</button>
             </div>
-            <button class="fb-share-button" style="margin-top: 30px"
-                    data-href="http://betsafe.com"
-                    data-layout="button_count">Share</button>
         </div>
         <div id="results_lose" class="main">
             <img class="rocktober-logo always-visible" src="static/img/rocktober.png">
