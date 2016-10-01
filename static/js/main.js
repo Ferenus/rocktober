@@ -35,3 +35,16 @@ $(document).ready(function () {
         }, 1000);
     });
 });
+
+function shareFb() {
+    FB.init({
+        appId      : 712683602217065,
+        status     : true,
+        xfbml      : true
+    });
+    FB.ui({
+        method: 'share',
+        mobile_iframe: true,
+        href: 'https://betsafe.com',
+    }, function(response){});
+}
