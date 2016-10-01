@@ -2,7 +2,7 @@
     background-color: #222327;
     color: #fefeff;
     height: 100%;
-    width: 320px;
+    font-family: 'museo_sans100', sans-serif;
 }
 
 .main {
@@ -25,8 +25,8 @@
 
 .intro {
     font-size: 42px;
-    font-family: 'museo_sans100', sans-serif;
     text-align: center;
+    font-weight: normal;
 }
 
 .button {
@@ -39,5 +39,6 @@
     border-radius: 10px;
     font-size: 40px;
     cursor: pointer;
+    font-family: 'museo_sans300', sans-serif;
 }
 
