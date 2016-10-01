@@ -1,0 +1,70 @@
+.contents {
+    background-color: #222327;
+    color: #fefeff;
+    height: 100%;
+    font-family: 'museo_sans100', sans-serif;
+}
+
+.main {
+    padding: 20px;
+    text-align: center;
+}
+
+.betsafe-logo {
+    box-sizing: border-box;
+    background-color: #010101;
+    height: 133px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.rocktober-logo {
+    max-width: 100%;
+}
+
+.intro {
+    font-size: 42px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.result {
+    font-size: 48px;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'museo_sans500', sans-serif;
+}
+
+.congratulation {
+    font-size: 42px;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 60px;
+    word-wrap: break-word;
+}
+
+.register {
+    font-size: 48px;
+    text-align: center;
+    font-weight: normal;
+    margin: 60px 10px 60px 10px;
+}
+
+.button {
+    background-color: #a20000;
+    padding: 25px 35px 25px 35px;
+    text-transform: uppercase;
+    color: #f7f7f7;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 48px;
+    cursor: pointer;
+    font-family: 'museo_sans500', sans-serif;
+}
+
+.congratulation-item {
+    height: 400px;
+    padding: 80px;
+}

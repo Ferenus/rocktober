@@ -31,13 +31,13 @@
 
 .button {
     background-color: #a20000;
-    padding: 18px;
+    padding: 25px 35px 25px 35px;
     text-transform: uppercase;
     color: #f7f7f7;
     -webkit-appearance: none;
     border: none;
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 48px;
     cursor: pointer;
     font-family: 'museo_sans500', sans-serif;
 }
