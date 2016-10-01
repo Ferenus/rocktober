@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rocktober</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
     <link rel="stylesheet" href="static/css/normalize.css" />
     <link rel="stylesheet" href="static/fonts/stylesheet.css" />
     <link rel="stylesheet" href="static/css/index.css" />
@@ -24,6 +26,7 @@
         </div>
         <div class="quiz">
             <h1 class="quiz-header">The Rocktober quiz</h1>
+            <form id="myForm">
             <div class="quiz-section">
                 <img src="static/img/motorhead-guitar.png">
                 <h2 class="quiz-section-title">Motörhead</h2>
@@ -245,8 +248,8 @@
                     <span class="answer"><input type="radio" id="q19_4" name="q19"><label for="q19_4">behind his back</label></span>
                 </div>
             </div>
-
-            <button class="button view-result">View my result</button>
+            </form>
+            <button class="button view-result" onClick="viewResult();">View my result</button>
         </div>
     </div>
 </body>
