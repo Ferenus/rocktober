@@ -23,10 +23,16 @@
     max-width: 100%;
 }
 
+.rocktober-logo-big {
+    display: none;
+}
+
 .intro {
     font-size: 42px;
     text-align: center;
     font-weight: normal;
+    max-width: 960px;
+    margin: 0 auto 20px;
 }
 
 .button {
@@ -56,10 +62,19 @@
 }
 
 .quiz-section {
+    margin: 50px auto 90px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 760px;
+}
+
+.quiz-section-title {
     font-family: 'museo_sans100', sans-serif;
     font-size: 42px;
     font-weight: normal;
-    margin: 50px 0 90px 0;
+    flex-grow: 2;
 }
 
 .quiz-item {
@@ -69,10 +84,11 @@
 .question {
     font-family: 'museo_sans300', sans-serif;
     font-size: 42px;
-    background: url('../img/question-small.png') no-repeat 0 0;
+    background: url('../img/question-small.png') repeat-x 0 0;
     height: 359px;
     display: flex;
     align-items: center;
+    justify-content: center;
     box-shadow: 0 10px 20px #000;
 }
 
@@ -93,7 +109,7 @@
 }
 
 .answer {
-    flex-basis: 90px;
+    flex-basis: 130px;
 }
 
 .view-result {
@@ -129,5 +145,72 @@ input[type=radio]:checked + label:before {
     font-size: 68px;
     text-align: center;
     line-height: 34px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        padding-top: 0;
+    }
+
+    .intro {
+        position: relative;
+        bottom: 150px;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .start-quiz {
+        position: relative;
+        bottom: 130px;
+    }
+
+    .betsafe-logo {
+        height: 85px;
+    }
+
+    .betsafe-logo > img {
+        width: 179px;
+    }
+
+    .button {
+        font-size: 30px;
+    }
+
+    .rocktober-logo {
+        display: none;
+    }
+
+    .rocktober-logo-big {
+        display: block;
+        max-width: 100%;
+    }
+
+    .question {
+        background: url('../img/question.png') no-repeat 0 0;
+        background-size: contain;
+        height: 194px;
+        width: 1024px;
+        box-shadow: 0 0 20px #000;
+        margin: 0 auto;
+        font-size: 36px;
+    }
+
+    .answers {
+        width: 1024px;
+        box-shadow: 0 0 20px #000;
+        margin: 5px auto 0;
+        padding-left: 130px;
+        padding-right: 130px;
+        font-family: 'museo_sans100', sans-serif;
+        font-size: 36px;
+    }
+
+    .quiz-section {
+        flex-direction: row;
+    }
+
+    .quiz-section-reversed {
+        flex-direction: row-reverse;
+    }
 }
 
