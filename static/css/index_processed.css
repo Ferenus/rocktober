@@ -182,18 +182,6 @@ button:focus {outline:0;}
     box-sizing: border-box;
     background-color: #222327;
     min-height: 185px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     padding: 40px 20px 20px 20px;
     font-family: 'museo_sans300', sans-serif;
     font-size: 21px;
@@ -203,8 +191,8 @@ button:focus {outline:0;}
 }
 
 .answer {
-    -ms-flex-preferred-size: 70px;
-        flex-basis: 70px;
+    display: block;
+    height: 70px;
 }
 
 .answer label {
@@ -354,8 +342,7 @@ input[type=radio]:checked + label:before {
     }
 
     .answer {
-        -ms-flex-preferred-size: 130px;
-            flex-basis: 130px;
+        height: 130px;
     }
 
     .answer label {
