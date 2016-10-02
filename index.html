@@ -3,67 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rocktober</title>
+    <title>Betsafe's "Rocktober" quiz</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src='http://connect.facebook.net/en_US/all.js'></script>
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
     <script src="static/js/main.js"></script>
-    <link rel="stylesheet" href="static/css/normalize.css" />
-    <link rel="stylesheet" href="static/fonts/stylesheet.css" />
-    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="static/css/normalize.css"/>
+    <link rel="stylesheet" href="static/fonts/stylesheet.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
 </head>
 <body bgcolor="#222327">
-    <div class="contents">
-        <div class="betsafe-logo">
+<div class="contents">
+    <div class="betsafe-logo">
+        <div class="echo-container">
             <img src="static/img/logo.png">
         </div>
-        <div class="main" id="intro">
-            <img class="rocktober-logo" src="static/img/rocktober.png">
-            <img class="rocktober-logo-big" src="static/img/rocktober-big.png">
-            <h1 class="intro">
-                Prove your rock 'n' roll knowledge and win exclusive prizes in the trivia challenge featuring
-                Motörhead, Guns 'n Roses and Jimi Hendrix.
-            </h1>
-            <button id="start-quiz" class="button start-quiz">Start quiz</button>
+    </div>
+    <div class="main" id="intro">
+        <img class="rocktober-logo" src="static/img/rocktober.jpg">
+        <img class="rocktober-logo-big" src="static/img/rocktober-big.jpg">
+        <h1 class="intro">
+            Prove your rock 'n' roll knowledge and win exclusive prizes in the trivia challenge featuring
+            Motörhead, Guns 'n Roses and Jimi Hendrix.
+        </h1>
+        <button id="start-quiz" class="button start-quiz">Start quiz</button>
+    </div>
+    <div class="main" id="results_win">
+        <img class="rocktober-logo always-visible" src="static/img/rocktober.jpg">
+        <h1 class="result">
+            YOUR RESULT IS <span id="results_score_win"></span>/19
+        </h1>
+        <div class="congratulation">
+            You're a Rockstar! You now have a chance to win an authentic Motörhead&trade; darts board, an iPhone cover
+            or a Guns 'n Roses band t-shirt. All you need to do is register an account with Betsafe on the link and
+            you will automatically be included in the draw to win one of these exclusive prize! At Betsafe you can
+            also win Free Spins every day this Rocktober with our Daily Teaser for 500,000 Free Spins and a weekly
+            &euro;5,000 Rocktober Tournament.
         </div>
-        <div class="main" id="results_win">
-            <img class="rocktober-logo always-visible" src="static/img/rocktober.png">
-            <h1 class="result">
-                YOUR RESULT IS <span id="results_score_win"></span>/19
-            </h1>
-            <div class="congratulation">
-                You're a Rockstar! You now have a chance to win an authentic Motörhead&trade; darts board, an iPhone cover
-                or a Guns 'n Roses band t-shirt. All you need to do is register an account with Betsafe on the link and
-                you will automatically be included in the draw to win one of these exclusive prize! At Betsafe you can
-                also win Free Spins every day this Rocktober with our Daily Teaser for 500,000 Free Spins and a weekly
-                &euro;5,000 Rocktober Tournament.
-            </div>
-            <div class="register">
-                REGISTER AT BETSAFE TO JOIN THE DRAW
-            </div>
-            <button class="button go-to-betsafe">GO TO BETSAFE</button><br/>
-            <div class="congratulation-items">
-                <img class="congratulation-item" src="static/img/cong1.png">
-                <img class="congratulation-item" src="static/img/cong2.png">
-                <img class="congratulation-item" src="static/img/cong3.png">
-                <br class="breaker">
-                <img class="congratulation-item" src="static/img/cong4.png">
-                <img class="congratulation-item" src="static/img/cong5.png">
-            </div>
-            <div class="share">
-                <span>Share your result on Facebook</span>
-                <button class="button share-btn" onclick="shareFb();">Share</button>
-            </div>
+        <div class="register">
+            REGISTER AT BETSAFE TO JOIN THE DRAW
         </div>
-        <div id="results_lose" class="main">
-            <img class="rocktober-logo always-visible" src="static/img/rocktober.png">
-            <h1 class="result">
-                YOUR RESULT IS <span id="results_score_lose"></span>/19
-            </h1>
-            <button class="button try-again" id="try-again">Click here to try again</button>
+        <button class="button go-to-betsafe" onclick="goToBetsafe();">GO TO BETSAFE</button>
+        <br/>
+        <div class="congratulation-items">
+            <img class="congratulation-item" src="static/img/cong1.png">
+            <img class="congratulation-item" src="static/img/cong2.png">
+            <img class="congratulation-item" src="static/img/cong3.png">
+            <br class="breaker">
+            <img class="congratulation-item" src="static/img/cong4.png">
+            <img class="congratulation-item" src="static/img/cong5.png">
         </div>
-        <div id="quiz" class="quiz">
-            <h1 class="quiz-header">The Rocktober quiz</h1>
-            <form id="myForm">
+        <div class="share">
+            <span>Share your result on Facebook</span>
+            <button class="button share-btn" onclick="shareFb();">Share</button>
+        </div>
+    </div>
+    <div id="results_lose" class="main">
+        <img class="rocktober-logo always-visible" src="static/img/rocktober.jpg">
+        <h1 class="result">
+            YOUR RESULT IS <span id="results_score_lose"></span>/19
+        </h1>
+        <button class="button try-again" id="try-again">Click here to try again</button>
+    </div>
+    <div id="quiz" class="quiz">
+        <h1 class="quiz-header">The Rocktober quiz</h1>
+        <form id="myForm">
             <div class="quiz-section">
                 <img src="static/img/motorhead-guitar.png">
                 <h2 class="quiz-section-title">Motörhead</h2>
@@ -82,10 +87,14 @@
                     What was the name of Motörhead's 1980 tour to promote Ace of Spades?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q2_1" name="q2"><label for="q2_1">Play the joker</label></span>
-                    <span class="answer"><input type="radio" id="q2_2" name="q2"><label for="q2_2">Ace Hole</label></span>
-                    <span class="answer"><input type="radio" id="q2_3" name="q2"><label for="q2_3">Ace Up Your Sleeve</label></span>
-                    <span class="answer"><input type="radio" id="q2_4" name="q2"><label for="q2_4">Speed Spade</label></span>
+                    <span class="answer"><input type="radio" id="q2_1" name="q2"><label
+                            for="q2_1">Play the joker</label></span>
+                    <span class="answer"><input type="radio" id="q2_2" name="q2"><label
+                            for="q2_2">Ace Hole</label></span>
+                    <span class="answer"><input type="radio" id="q2_3" name="q2"><label
+                            for="q2_3">Ace Up Your Sleeve</label></span>
+                    <span class="answer"><input type="radio" id="q2_4" name="q2"><label
+                            for="q2_4">Speed Spade</label></span>
                 </div>
             </div>
             <div class="quiz-item">
@@ -93,9 +102,12 @@
                     Who was the sole Scottish member of Motörhead?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q3_1" name="q3"><label for="q3_1">Brian Robertson</label></span>
-                    <span class="answer"><input type="radio" id="q3_2" name="q3"><label for="q3_2">Mikkey Dee</label></span>
-                    <span class="answer"><input type="radio" id="q3_3" name="q3"><label for="q3_3">Lucas Fox</label></span>
+                    <span class="answer"><input type="radio" id="q3_1" name="q3"><label
+                            for="q3_1">Brian Robertson</label></span>
+                    <span class="answer"><input type="radio" id="q3_2" name="q3"><label
+                            for="q3_2">Mikkey Dee</label></span>
+                    <span class="answer"><input type="radio" id="q3_3" name="q3"><label
+                            for="q3_3">Lucas Fox</label></span>
                     <span class="answer"><input type="radio" id="q3_4" name="q3"><label for="q3_4">Wurzel</label></span>
                 </div>
             </div>
@@ -126,10 +138,14 @@
                     What is the name of Motörhead’s fanclub?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q6_1" name="q6"><label for="q6_1">Motorheadbangers</label></span>
-                    <span class="answer"><input type="radio" id="q6_2" name="q6"><label for="q6_2">Motorboys</label></span>
-                    <span class="answer"><input type="radio" id="q6_3" name="q6"><label for="q6_3">Metalheads</label></span>
-                    <span class="answer"><input type="radio" id="q6_4" name="q6"><label for="q6_4">The Motorhead fanclub</label></span>
+                    <span class="answer"><input type="radio" id="q6_1" name="q6"><label
+                            for="q6_1">Motorheadbangers</label></span>
+                    <span class="answer"><input type="radio" id="q6_2" name="q6"><label
+                            for="q6_2">Motorboys</label></span>
+                    <span class="answer"><input type="radio" id="q6_3" name="q6"><label
+                            for="q6_3">Metalheads</label></span>
+                    <span class="answer"><input type="radio" id="q6_4" name="q6"><label
+                            for="q6_4">The Motorhead fanclub</label></span>
                 </div>
             </div>
             <div class="quiz-item">
@@ -137,10 +153,13 @@
                     Which Sex Pistols song did the band cover in May 2000?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q7_1" name="q7"><label for="q7_1">God Save The Queen</label></span>
-                    <span class="answer"><input type="radio" id="q7_2" name="q7"><label for="q7_2">Holidays in the sun</label></span>
+                    <span class="answer"><input type="radio" id="q7_1" name="q7"><label
+                            for="q7_1">God Save The Queen</label></span>
+                    <span class="answer"><input type="radio" id="q7_2" name="q7"><label
+                            for="q7_2">Holidays in the sun</label></span>
                     <span class="answer"><input type="radio" id="q7_3" name="q7"><label for="q7_3">Pretty Vacant</label></span>
-                    <span class="answer"><input type="radio" id="q7_4" name="q7"><label for="q7_4">Anarchy in the UK</label></span>
+                    <span class="answer"><input type="radio" id="q7_4" name="q7"><label
+                            for="q7_4">Anarchy in the UK</label></span>
                 </div>
             </div>
 
@@ -154,10 +173,13 @@
                     What is Slash's most hated song?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q8_1" name="q8"><label for="q8_1">Welcome To the Jungle</label></span>
+                    <span class="answer"><input type="radio" id="q8_1" name="q8"><label
+                            for="q8_1">Welcome To the Jungle</label></span>
                     <span class="answer"><input type="radio" id="q8_2" name="q8"><label for="q8_2">Paradise City</label></span>
-                    <span class="answer"><input type="radio" id="q8_3" name="q8"><label for="q8_3">Sweet Child O Mine</label></span>
-                    <span class="answer"><input type="radio" id="q8_4" name="q8"><label for="q8_4">Breakdown</label></span>
+                    <span class="answer"><input type="radio" id="q8_3" name="q8"><label
+                            for="q8_3">Sweet Child O Mine</label></span>
+                    <span class="answer"><input type="radio" id="q8_4" name="q8"><label
+                            for="q8_4">Breakdown</label></span>
                 </div>
             </div>
             <div class="quiz-item">
@@ -166,9 +188,12 @@
                 </div>
                 <div class="answers">
                     <span class="answer"><input type="radio" id="q9_1" name="q9"><label for="q9_1">Coma</label></span>
-                    <span class="answer"><input type="radio" id="q9_2" name="q9"><label for="q9_2">Welcome To the Jungle</label></span>
-                    <span class="answer"><input type="radio" id="q9_3" name="q9"><label for="q9_3">Estranged</label></span>
-                    <span class="answer"><input type="radio" id="q9_4" name="q9"><label for="q9_4">14 Years</label></span>
+                    <span class="answer"><input type="radio" id="q9_2" name="q9"><label
+                            for="q9_2">Welcome To the Jungle</label></span>
+                    <span class="answer"><input type="radio" id="q9_3" name="q9"><label
+                            for="q9_3">Estranged</label></span>
+                    <span class="answer"><input type="radio" id="q9_4" name="q9"><label
+                            for="q9_4">14 Years</label></span>
                 </div>
             </div>
             <div class="quiz-item">
@@ -186,9 +211,12 @@
                     What song is written about Rose's and Stradlin's relationship?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q11_1" name="q11"><label for="q11_1">Coma</label></span>
-                    <span class="answer"><input type="radio" id="q11_2" name="q11"><label for="q11_2">Ain't it Fun</label></span>
-                    <span class="answer"><input type="radio" id="q11_3" name="q11"><label for="q11_3">14 Years</label></span>
+                    <span class="answer"><input type="radio" id="q11_1" name="q11"><label
+                            for="q11_1">Coma</label></span>
+                    <span class="answer"><input type="radio" id="q11_2" name="q11"><label
+                            for="q11_2">Ain't it Fun</label></span>
+                    <span class="answer"><input type="radio" id="q11_3" name="q11"><label
+                            for="q11_3">14 Years</label></span>
                     <span class="answer"><input type="radio" id="q11_4" name="q11"><label for="q11_4">Breakdown</label></span>
                 </div>
             </div>
@@ -208,10 +236,14 @@
                     What does the yellow and red tattoo say on Axl's arm?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q13_1" name="q13"><label for="q13_1">Wish You Were Us</label></span>
-                    <span class="answer"><input type="radio" id="q13_2" name="q13"><label for="q13_2">It's in Chinese</label></span>
-                    <span class="answer"><input type="radio" id="q13_3" name="q13"><label for="q13_3">Can't Kill Us</label></span>
-                    <span class="answer"><input type="radio" id="q13_4" name="q13"><label for="q13_4">Victory or Death</label></span>
+                    <span class="answer"><input type="radio" id="q13_1" name="q13"><label
+                            for="q13_1">Wish You Were Us</label></span>
+                    <span class="answer"><input type="radio" id="q13_2" name="q13"><label
+                            for="q13_2">It's in Chinese</label></span>
+                    <span class="answer"><input type="radio" id="q13_3" name="q13"><label
+                            for="q13_3">Can't Kill Us</label></span>
+                    <span class="answer"><input type="radio" id="q13_4" name="q13"><label
+                            for="q13_4">Victory or Death</label></span>
                 </div>
             </div>
             <div class="quiz-item">
@@ -235,18 +267,24 @@
                     Jimi Hendrix developed his U S career as an opening act for what band?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q15_1" name="q15"><label for="q15_1">The Rolling Stones</label></span>
-                    <span class="answer"><input type="radio" id="q15_2" name="q15"><label for="q15_2">The Monkees</label></span>
-                    <span class="answer"><input type="radio" id="q15_3" name="q15"><label for="q15_3">The Beatles</label></span>
-                    <span class="answer"><input type="radio" id="q15_4" name="q15"><label for="q15_4">The Who</label></span>
+                    <span class="answer"><input type="radio" id="q15_1" name="q15"><label
+                            for="q15_1">The Rolling Stones</label></span>
+                    <span class="answer"><input type="radio" id="q15_2" name="q15"><label
+                            for="q15_2">The Monkees</label></span>
+                    <span class="answer"><input type="radio" id="q15_3" name="q15"><label
+                            for="q15_3">The Beatles</label></span>
+                    <span class="answer"><input type="radio" id="q15_4" name="q15"><label
+                            for="q15_4">The Who</label></span>
                 </div>
             </div>
             <div class="quiz-item">
                 <div class="question">
-                    At the Woodstock festival in 1969 what iconic U S patriotic song did Jimi Hendrix turn into a political statement?
+                    At the Woodstock festival in 1969 what iconic U S patriotic song did Jimi Hendrix turn into a
+                    political statement?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q16_1" name="q16"><label for="q16_1">God Bless America</label></span>
+                    <span class="answer"><input type="radio" id="q16_1" name="q16"><label
+                            for="q16_1">God Bless America</label></span>
                     <span class="answer"><input type="radio" id="q16_2" name="q16"><label for="q16_2">America, the Beautiful</label></span>
                     <span class="answer"><input type="radio" id="q16_3" name="q16"><label for="q16_3">The Battle Hymn of the Republic</label></span>
                     <span class="answer"><input type="radio" id="q16_4" name="q16"><label for="q16_4">The Star Spangled Banner</label></span>
@@ -257,10 +295,13 @@
                     Which of the following Jimi Hendrix albums reached number 1 in the USA?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q17_1" name="q17"><label for="q17_1">Electric Ladyland</label></span>
-                    <span class="answer"><input type="radio" id="q17_2" name="q17"><label for="q17_2">Aixs:Bold as Love</label></span>
+                    <span class="answer"><input type="radio" id="q17_1" name="q17"><label
+                            for="q17_1">Electric Ladyland</label></span>
+                    <span class="answer"><input type="radio" id="q17_2" name="q17"><label
+                            for="q17_2">Aixs:Bold as Love</label></span>
                     <span class="answer"><input type="radio" id="q17_3" name="q17"><label for="q17_3">Are You Experienced</label></span>
-                    <span class="answer"><input type="radio" id="q17_4" name="q17"><label for="q17_4">Midnight Lightning</label></span>
+                    <span class="answer"><input type="radio" id="q17_4" name="q17"><label
+                            for="q17_4">Midnight Lightning</label></span>
                 </div>
             </div>
             <div class="quiz-item">
@@ -268,10 +309,13 @@
                     With what brand of electric guitar is Jimi Hendrix best associated?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q18_1" name="q18"><label for="q18_1">360 Rickenbacker</label></span>
+                    <span class="answer"><input type="radio" id="q18_1" name="q18"><label
+                            for="q18_1">360 Rickenbacker</label></span>
                     <span class="answer"><input type="radio" id="q18_2" name="q18"><label for="q18_2">Fender Stratocaster</label></span>
-                    <span class="answer"><input type="radio" id="q18_3" name="q18"><label for="q18_3">Bigsby tremolo</label></span>
-                    <span class="answer"><input type="radio" id="q18_4" name="q18"><label for="q18_4">Gibson Les Paul</label></span>
+                    <span class="answer"><input type="radio" id="q18_3" name="q18"><label
+                            for="q18_3">Bigsby tremolo</label></span>
+                    <span class="answer"><input type="radio" id="q18_4" name="q18"><label
+                            for="q18_4">Gibson Les Paul</label></span>
                 </div>
             </div>
             <div class="quiz-item">
@@ -279,15 +323,19 @@
                     With which body part did Jimi Hendrix not play his guitar while on stage?
                 </div>
                 <div class="answers">
-                    <span class="answer"><input type="radio" id="q19_1" name="q19"><label for="q19_1">teeth</label></span>
-                    <span class="answer"><input type="radio" id="q19_2" name="q19"><label for="q19_2">crotch</label></span>
-                    <span class="answer"><input type="radio" id="q19_3" name="q19"><label for="q19_3">toes</label></span>
-                    <span class="answer"><input type="radio" id="q19_4" name="q19"><label for="q19_4">behind his back</label></span>
+                    <span class="answer"><input type="radio" id="q19_1" name="q19"><label
+                            for="q19_1">teeth</label></span>
+                    <span class="answer"><input type="radio" id="q19_2" name="q19"><label
+                            for="q19_2">crotch</label></span>
+                    <span class="answer"><input type="radio" id="q19_3" name="q19"><label
+                            for="q19_3">toes</label></span>
+                    <span class="answer"><input type="radio" id="q19_4" name="q19"><label
+                            for="q19_4">behind his back</label></span>
                 </div>
             </div>
-            </form>
-            <button class="button view-result" onClick="viewResult();">View my result</button>
-        </div>
+        </form>
+        <button class="button view-result" onClick="viewResult();">View my result</button>
     </div>
+</div>
 </body>
 </html>

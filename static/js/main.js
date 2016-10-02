@@ -73,6 +73,10 @@ function shareFb() {
     FB.ui({
         method: 'share',
         mobile_iframe: true,
-        href: 'https://betsafe.com',
+        href: 'https://betsafe.com'
     }, function(response){});
+}
+
+function goToBetsafe() {
+    window.location.href = 'https://betsafe.com';
 }
