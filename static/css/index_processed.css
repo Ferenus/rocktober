@@ -1,0 +1,382 @@
+.echo-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1170px;
+}
+
+button:focus {outline:0;}
+
+.contents {
+    background-color: #222327;
+    color: #fefeff;
+    height: 100%;
+    font-family: 'museo_sans100', sans-serif;
+}
+
+.main {
+    padding: 20px;
+    text-align: center;
+}
+
+.betsafe-logo {
+    position: static;
+    right: 0;
+    left:0;
+    z-index: 1030;
+    box-sizing: border-box;
+    background-color: #010101;
+    height: 98px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 10px;
+}
+
+.rocktober-logo {
+    max-width: 100%;
+}
+
+.rocktober-logo-big {
+    display: none;
+    margin: auto;
+}
+
+.intro {
+    font-size: 21px;
+    text-align: center;
+    font-weight: normal;
+    max-width: 960px;
+    margin: 0 auto 20px;
+}
+
+.result {
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'museo_sans500', sans-serif;
+}
+
+.congratulation {
+    font-size: 21px;
+    text-align: center;
+    font-weight: normal;
+    margin: 60px auto 0;
+    word-wrap: break-word;
+    max-width: 940px;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.register {
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+    margin: 60px 10px 60px 10px;
+}
+
+.breaker {
+    display: none;
+}
+
+.go-to-betsafe {
+    margin-bottom: 40px;
+}
+
+.congratulation-item {
+    display: block;
+    margin: 55px auto;
+    max-width: 100%;
+}
+
+.share {
+    font-family: 'museo_sans100', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.share-btn {
+    display: block;
+    margin: 80px auto 0;
+}
+
+.button {
+    background-color: #a20000;
+    padding: 25px 35px 25px 35px;
+    text-transform: uppercase;
+    color: #f7f7f7;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: 'museo_sans500', sans-serif;
+}
+
+.quiz {
+    background-color: #1b1b1d;
+    padding: 33px 0;
+    text-align: center;
+    display: none;
+}
+
+.quiz-header {
+    text-transform: uppercase;
+    font-family: 'museo_sans900', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.quiz-section {
+    margin: 50px auto 90px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 760px;
+}
+
+.quiz-section-title {
+    font-family: 'museo_sans100', sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+}
+
+.quiz-item {
+    margin-top: 40px;
+}
+
+.question {
+    font-family: 'museo_sans300', sans-serif;
+    font-size: 21px;
+    background: url('../img/question-small.jpg') repeat-x 0 0;
+    height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    box-shadow: 0 10px 20px #000;
+}
+
+.answers {
+    box-sizing: border-box;
+    background-color: #222327;
+    min-height: 185px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 40px 20px 20px 20px;
+    font-family: 'museo_sans300', sans-serif;
+    font-size: 21px;
+    text-align: left;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px #0d0d0d;
+}
+
+.answer {
+    -ms-flex-preferred-size: 70px;
+        flex-basis: 70px;
+}
+
+.answer label {
+    padding-top: 8px;
+}
+
+.view-result {
+    margin: 20px;
+}
+
+#results_win, #results_lose {
+    display: none;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 88px;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0f0f0f;
+    border-radius: 19px;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #f3f3f3;
+    font-size: 68px;
+    text-align: center;
+    line-height: 34px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        padding-top: 0;
+    }
+
+    .intro {
+        position: relative;
+        bottom: 150px;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .start-quiz {
+        position: relative;
+        bottom: 130px;
+    }
+
+    .betsafe-logo {
+        position: fixed;
+    }
+
+    .betsafe-logo > img {
+        width: 179px;
+    }
+
+    .button {
+        font-size: 30px;
+    }
+
+    .rocktober-logo:not(.always-visible) {
+        display: none;
+    }
+
+    .rocktober-logo-big {
+        display: block;
+        max-width: 100%;
+    }
+
+    .question {
+        background: url('../img/question.jpg') no-repeat 0 0;
+        background-size: contain;
+        height: 194px;
+        width: 1024px;
+        box-shadow: 0 0 20px #000;
+        margin: 0 auto;
+        font-size: 36px;
+    }
+
+    .answers {
+        width: 1024px;
+        box-shadow: 0 0 20px #000;
+        margin: 5px auto 0;
+        padding: 80px 130px 40px 130px;
+        font-family: 'museo_sans100', sans-serif;
+        font-size: 36px;
+    }
+
+    .quiz-section {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .quiz-section-reversed {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+    }
+
+    .result {
+        font-size: 36px;
+        font-family: 'museo_sans300', sans-serif;
+    }
+
+    .congratulation {
+        font-size: 24px;
+        font-family: 'museo_sans100', sans-serif;
+    }
+
+    .register {
+        font-size: 30px;
+        font-family: 'museo_sans100', sans-serif;
+    }
+
+    .share-btn {
+        margin-top: 60px;
+    }
+
+    .share {
+        font-size: 24px;
+    }
+
+    .breaker {
+        display: block;
+    }
+
+    .congratulation-item {
+        display: inline;
+        margin: 55px;
+    }
+
+    .answer {
+        -ms-flex-preferred-size: 130px;
+            flex-basis: 130px;
+    }
+
+    .answer label {
+        padding-top: 0;
+    }
+
+    .quiz-header {
+        font-size: 48px;
+    }
+
+    .quiz-section-title {
+        font-size: 42px;
+    }
+
+    nav.betsafe-logo.shrink {
+        height: 75px;
+    }
+
+    nav.betsafe-logo.shrink .echo-container img{
+        height: 35px;
+    }
+
+}
+
