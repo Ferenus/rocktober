@@ -19,6 +19,10 @@ button:focus {outline:0;}
 }
 
 .betsafe-logo {
+    position: static;
+    right: 0;
+    left:0;
+    z-index: 1030;
     box-sizing: border-box;
     background-color: #010101;
     height: 98px;
@@ -234,6 +238,10 @@ input[type=radio]:checked + label:before {
         bottom: 130px;
     }
 
+    .betsafe-logo {
+        position: fixed;
+    }
+
     .betsafe-logo > img {
         width: 179px;
     }
@@ -325,5 +333,14 @@ input[type=radio]:checked + label:before {
     .quiz-section-title {
         font-size: 42px;
     }
+
+    nav.betsafe-logo.shrink {
+        height: 75px;
+    }
+
+    nav.betsafe-logo.shrink .echo-container img{
+        height: 35px;
+    }
+
 }
 
